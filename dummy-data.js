@@ -34,10 +34,12 @@ const DUMMY_EVENTS = [
   },
 ];
 
+// Get the events where the attribute isFeatured is set to true
 export function getFeaturedEvents() {
   return DUMMY_EVENTS.filter((event) => event.isFeatured);
 }
 
+// get all events present in DUMMY_EVENTS array
 export function getAllEvents() {
   return DUMMY_EVENTS;
 }

@@ -9,3 +9,11 @@
 
 Note: Files and Folders stored outside of public/ are not made accessible by NextJS - Visitors cannot load files from there. 
 
+#### CODE ANALYSIS:
+```javascript
+ const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
+        day: "numeric",
+        month: 'long',
+        year:"numeric"
+    })
+```
