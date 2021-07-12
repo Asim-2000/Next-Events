@@ -1,23 +1,23 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import Button from '../UI/Button'
-import classes from './EventItem.module.css'
+import Button from "../UI/Button"
+import classes from "./EventItem.module.css"
 
-import AddressIcon from '../icons/address-icon'
-import ArrowRightIcon from '../icons/arrow-right-icon'
-import DateIcon from '../icons/date-icon'
+import AddressIcon from "../icons/address-icon"
+import ArrowRightIcon from "../icons/arrow-right-icon"
+import DateIcon from "../icons/date-icon"
 
 function EventItem(props) {
-  const { title, image, date, location, id } = props;
+  const { title, image, date, location, id } = props
 
   const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
-  });
+  })
 
-  const formattedAddress = location.replace(", ", "\n");
-  const exploreLink = `/events/${id}`;
+  const formattedAddress = location.replace(", ", "\n")
+  const exploreLink = `/events/${id}`
 
   return (
     <li className={classes.item}>
@@ -35,12 +35,14 @@ function EventItem(props) {
         <div className={classes.actions}>
           <Button link={exploreLink}>
             <span>Explore Event</span>
-            <span className={classes.icon}><ArrowRightIcon/></span>
+            <span className={classes.icon}>
+              <ArrowRightIcon />
+            </span>
           </Button>
         </div>
       </div>
     </li>
-  );
+  )
 }
 
-export default EventItem;
+export default EventItem
